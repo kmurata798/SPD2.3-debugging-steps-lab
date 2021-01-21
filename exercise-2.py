@@ -15,6 +15,9 @@ Exercise 2
 #
 # TODO: State your assumptions here or say them out loud to your partner ...
 # Make sure to be SPECIFIC about what each of your assumptions is!
+"""
+The loop was immediately ending if the if statement fails, so we shouldn't return false using an else statement.
+"""
 
 def contains_3_consecutive(list_of_nums):
     """Return True if the list contains 3 consecutive numbers each increasing by 1."""
@@ -22,8 +25,8 @@ def contains_3_consecutive(list_of_nums):
         if (list_of_nums[i+1] == list_of_nums[i] + 1 and
             list_of_nums[i+2] == list_of_nums[i] + 2):
             return True
-        else:
-            return False
+        # else:
+        #     return False
 
     return False
 
