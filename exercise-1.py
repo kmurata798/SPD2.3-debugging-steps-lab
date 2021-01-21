@@ -15,11 +15,16 @@ Exercise 1
 #
 # TODO: State your assumptions here or say them out loud to your partner ...
 # Make sure to be SPECIFIC about what each of your assumptions is!
+"""The line with the diff variable is attempting to access the next index in the list but it is eventually
+reaching outside of the list.
+I resolved the bug by lowering the number of loops that occur in the for loop so that the loop would end before
+we receive any "list index out of range" error.
+"""
 
 def find_largest_diff(list_of_nums):
     """Find the largest difference between *consecutive* numbers in a list."""
     largest_diff = 0
-    for i in range(len(list_of_nums)):
+    for i in range(len(list_of_nums) - 1): # <-- fix by adding range(len(list_of_nums) - 1)
         diff = abs(list_of_nums[i] - list_of_nums[i+1])
         if diff > largest_diff:
             largest_diff = diff

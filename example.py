@@ -32,7 +32,7 @@ Use this as an example of how to work through the steps in the lesson.
 
 def find_largest_number(list_of_nums):
     largest_num = list_of_nums[0]
-    for i in range(len(list_of_nums)):
+    for i in range(len(list_of_nums)): # <-- fix by looping through the len of the list rather than the index values
         if list_of_nums[i] > largest_num:
             largest_num = list_of_nums[i]
     return largest_num
