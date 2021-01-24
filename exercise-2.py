@@ -17,6 +17,7 @@ Exercise 2
 # Make sure to be SPECIFIC about what each of your assumptions is!
 """
 The loop was immediately ending if the if statement fails, so we shouldn't return false using an else statement.
+Removing the else statement allows the loop to continue throughout the entire list before returning false.
 """
 
 def contains_3_consecutive(list_of_nums):
